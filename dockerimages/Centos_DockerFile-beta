@@ -1,3 +1,4 @@
+#DockerFile/version:02
 FROM centos:centos7
 MAINTAINER BP.S
 
@@ -5,14 +6,10 @@ RUN mkdir /mnt/OPS/
 WORKDIR /mnt/OPS/
 
 RUN touch /mnt/OPS/Laboon-1Ps.txt
-
 RUN echo -e 'Laboon and Soulking' > /mnt/OPS/Laboon-1Ps.txt
 
 RUN yum install wget vim -y
 
 #RUN yum install openssh-server -y
-
 #CMD     [/usr/sbin/httpd,-D,FOREGROUND] \\ #Start apache automatily after bootup
-
-E#NTRYPOINT systemctl start sshd.service && /bin/bash
-
+#ENTRYPOINT systemctl start sshd.service && /bin/bash
