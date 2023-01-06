@@ -31,3 +31,7 @@
 
 11. Error: unable to delete 369dd4ceb19d (must be forced) image is referenced in multiple repositories
     > * sudo docker rmi -f $(docker images -q)
+
+12. check the disk usage of running Docker containers
+    > * docker ps --size or docker ps -s 
+    > * docker system  df ``total running containers``
