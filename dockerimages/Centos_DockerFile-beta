@@ -10,9 +10,9 @@ RUN echo -e 'Laboon and Soulking' > /mnt/OPS/Laboon-1Ps.txt
 
 RUN yum install wget vim -y
 
-RUN yum install openssh-server -y
+#RUN yum install openssh-server -y
 
-#CMD     [/usr/sbin/httpd,-D,FOREGROUND] #Start apache automatily after bootup
+#CMD     [/usr/sbin/httpd,-D,FOREGROUND] \\ #Start apache automatily after bootup
 
-ENTRYPOINT systemctl start sshd.service && /bin/bash
+E#NTRYPOINT systemctl start sshd.service && /bin/bash
 
