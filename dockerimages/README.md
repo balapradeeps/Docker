@@ -6,7 +6,8 @@
     > - sudo docker image ls
 3. Verify the port is not assigned to any services
     > - netstat -tpuln |grep 80 
-4. Run the docker container in detach mode with specify port First port(8082) need to open in security group and Second is assigend to docker inside service  
+4. Run the docker container in detach mode with specify port First port(8082) need to open in security group and Second is assigend to docker inside service, ``[docker container run -d -p 8082(hostport):80(containerport) 04c243890076]`` host port will change but container port will never change untill we change config file. 
+
     > - sudo docker container run -d -p 8082:80 04c243890076 
 5. Interact the docker container with Container ID or Container Name
     > - sudo docker container exec -it b1544a796c65 /bin/bash ``(or)`` sudo docker container exec -it beasm/bin/bash
