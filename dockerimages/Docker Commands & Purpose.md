@@ -57,6 +57,9 @@ docker rmi $(docker images -q)
 12. check the disk usage of running Docker containers
  ``` 
  docker ps --size or docker ps -s 
- docker system  df ``total running containers 
  ```
+ 13. Total running containers and disk space
+ ```
+docker system  df
+```
  
