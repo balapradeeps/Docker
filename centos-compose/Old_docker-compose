@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  Development:
+    image: centos:7
+    container_name: Dev
+    networks:
+      - mynetwork
+  QualityAssurance:
+    <<: *centos1
+    container_name: QA
+  Production:
+    <<: *centos1
+    container_name: Pro
+networks:
+  mynetwork:
+    driver: bridge
+

@@ -1,0 +1,21 @@
+version: '3.9'
+x-anchors:
+  &centos_image centos:7
+
+services:
+  centos1:
+    image: *centos_image
+    container_name: centos1
+    networks:
+      - mynetwork
+  centos2:
+    <<: *centos_image
+    container_name: centos2
+  centos3:
+    <<: *centos_image
+    container_name: centos3
+
+networks:
+  mynetwork:
+    driver: bridge
+

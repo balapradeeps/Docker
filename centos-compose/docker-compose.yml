@@ -1,0 +1,25 @@
+---
+version: "3.10"
+services:
+  centos1:
+    image: centos:7
+    tty: true
+    container_name: centos1
+    networks:
+      - mynetwork
+  centos2:
+    image: centos:7
+    tty: true
+    container_name: centos2
+    networks:
+      - mynetwork
+  centos3:
+    image: centos:7
+    tty: true
+    container_name: centos3
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    driver: bridge
+
